@@ -34,6 +34,9 @@
     }
     
     picker.modalPresentationStyle = UIModalPresentationCurrentContext;
+    if (@available(iOS 11.0, *)) {
+        picker.videoExportPreset = AVAssetExportPresetPassthrough;
+    }
 }
 
 + (BOOL) isSimulator {
